@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+		<title> xkcd 2501 generator </title>
+		<link rel='apple-touch-icon' sizes='180x180' href='assets/favicon/apple-touch-icon.png'>
+		<link rel='icon' type='image/png' sizes='32x32' href='assets/favicon/favicon-32x32.png'>
+		<link rel='icon' type='image/png' sizes='16x16' href='assets/favicon/favicon-16x16.png'>
+		<link rel='manifest' href='assets/favicon/site.webmanifest'>
+		<link rel='stylesheet' href='style.css'>
+	</head>
+</html>
+<body>
+	<header>
+		<h1>xkcd 2501 generator</h1>
+	</header>
+	<main>
+		<canvas id='canvas' width=295 height=480></canvas>
+		<fieldset hidden>
+			<legend>Options</legend>
+			<label for='inputTopic'> Topic: </label>
+			<input type=text id='inputTopic' placeholder='Silicate Chemistry'></input>
+			<label for='inputExpert'> Experts: </label>
+			<input type=text id='inputExperts' placeholder='Geochemists'></input>
+			<label for='inputExample'> Example: </label>
+			<input type=text id='inputExample' placeholder='The formulas for olivine and one or two feldspars'></input>
+			<label for='inputResponse'> Response: </label>
+			<input type=text id='inputResponse' placeholder='Quartz'></input>
+		</fieldset>
+		<section id='buttons'>
+			<button id='buttonCopy'>Copy to Clipboard</button>
+			<button id='buttonSave'>Save Image</button>
+		</section>
+	</main>
+	<footer>
+		xkcd is licensed under CC BY-NC 2.5. More information <a href='https://xkcd.com/license.html'>here</a><br>
+		<a href='https://github.com/ipython/xkcd-font'>xkcd-font</a> is licensed under CC BY-NC 3.0.<br>
+		<a href='https://github.com/MarshDeer/xkcd2501-generator'>Source Code</a> | <a href='https://github.com/MarshDeer/xkcd2501-generator/issues/new'>Report Bug</a><br>
+	</footer>
+	<footer>
+		<a href="https://lensdeer.neocities.org" target="_blank">
+			<img src="https://lensdeer.neocities.org/globals/88x31.gif" alt="lensdeer's Hideout">
+		</a>
+		<a href="https://marshdeer.github.io/howlongmojang" target="_blank">
+			<img src="http://marshdeer.github.io/howlongmojang/img/button.gif" alt="How long, Mojang?">
+		</a>
+		<a href="https://marshdeer.github.io/root-faction-randomizer" target="_blank">
+			<img src="https://marshdeer.github.io/root-faction-randomizer/assets/88x31.gif" alt="Root Faction Randomizer">
+		</a>
+		<a href="https://marshdeer.github.io/xkcd2501-generator" target="_blank">
+			<img src="/assets/88x51.gif" alt="xkcd 2501 generator">
+		</a>
+	</footer>
+	<script src='script.js'></script>
+</body>

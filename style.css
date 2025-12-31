@@ -1,0 +1,161 @@
+@font-face {
+	font-family: 'xkcd-script';
+	src: url('assets/xkcd-script.woff') format('woff');
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0%;
+	display: flex;
+	flex-direction: column;
+	background: #96a8c8;
+	align-items: center;
+	gap: 5px;
+	font-family: 'xkcd-script';
+	text-align: center;
+	padding: 10px 0;
+}
+
+header,
+main,
+footer {
+	background: #FFF;
+	border: 1.5px solid #000;
+	border-radius: 12px;
+	width: calc(100% - 20px);
+	max-width: 780px;
+	padding: 10px;
+}
+
+a {
+	color: #96A8C8;
+	font-weight: bold;
+	text-decoration: underline 1px dotted;
+}
+
+a:hover {
+	text-decoration: underline 1px solid;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 3rem;
+}
+
+button {
+	background: #6E7B91;
+	color: #FFF;
+	border: 1px solid #333;
+	padding: 1px 1ch;
+	border-radius: 3px;
+	font-family: inherit;
+	font-weight: bold;
+	box-shadow: 0 0 5px gray;
+	width: fit-content;
+	margin: auto;
+	font-size: large;
+}
+
+button:where(:focus, :hover) {
+	background: #FFF;
+	color: #6E7B91;
+	box-shadow: none;
+	cursor: pointer;
+}
+
+main {
+	display: grid;
+	grid-template-areas:
+		'comic options'
+		'button button';
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 10px;
+}
+
+fieldset {
+	grid-area: options;
+	display: grid;
+	grid-template-columns: 10ch 1fr;
+	padding: 1em 1ch;
+	background: #DDD;
+	border: 2px solid #666;
+	border-radius: 5px;
+	position: relative;
+	gap: 5px;
+	justify-self: left;
+	opacity: 0;
+	animation: fadein .3s forwards 1;
+	animation-delay: .2s;
+}
+
+@keyframes fadein {
+	from {
+		left: -10px;
+		opacity: 0;
+	}
+	to {
+		left: 0;
+		opacity: 1;
+	}
+}
+
+fieldset::before,
+fieldset::after {
+	content: '';
+	width: 0;
+	height: 0;
+	position: absolute;
+	border: 8px solid transparent;
+	top: 50%;
+	display: block;
+}
+
+fieldset::before {
+	border-right-color: #666;
+	left: -18px;
+}
+fieldset::after {
+	border-right-color: #DDD;
+	left: -16px;
+}
+
+legend {
+	padding: 1px 1ch;
+	border: 2px solid #666;
+	background: #EEE;
+	border-radius: 5px;
+	color: #666;
+}
+
+label {
+	text-align: right;
+}
+
+input {
+	font-family: inherit;
+	text-transform: uppercase;
+	background: none;
+	border: none;
+	border-bottom: 1px solid #777;
+	font-size: 1rem;
+	border-radius: 3px;
+}
+
+input:where(:focus, :active) {
+	outline: none;
+	background: #EEE;
+}
+
+canvas, main img {
+	width: 295px;
+	height: 480px;
+	justify-self: right;
+}
+
+footer a:has(img) {
+	text-decoration: none !important;
+}
+
+#buttons {grid-area: button;}

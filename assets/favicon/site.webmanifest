@@ -1,0 +1,13 @@
+{
+	"name":"xkcd 2501 generator",
+	"short_name":"2501gen",
+	"description":"Generate images based on xkcd 2501 'Average Familiarity'",
+	"categories":["entertainment","personalization","utilities"],
+	"icons":[
+		{"src":"assets/favicon/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},
+		{"src":"assets/favicon/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}
+	],
+	"theme_color":"#ffffff",
+	"background_color":"#96a8c8",
+	"display":"minimal-ui"
+}
