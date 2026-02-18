@@ -32,7 +32,7 @@ function draw() {
 	let topic_verb = plural_topic ? 'are' : 'is'; 
 
 	let text1 = `${topic} ${topic_verb} second nature to us ${experts}, so it's easy to forget that the average person probably only knows ${example}.`
-	let text2 = `And ${response}, of course`
+	let text2 = `And ${response}, of course.`
 	
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
