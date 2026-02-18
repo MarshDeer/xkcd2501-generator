@@ -24,11 +24,14 @@ buttonCopy.addEventListener('click', async function copyImage() {
 
 function draw() {
 	let topic = inputTopic.value || 'Silicate Chemistry';
+	let plural_topic = inputPluralTopic.checked;
 	let experts = inputExperts.value || 'Geochemists';
 	let example = inputExample.value || 'The formulas for olivine and one or two feldspars';
 	let response = inputResponse.value || 'Quartz';
 	
-	let text1 = `${topic} is second nature to us ${experts}, so it's easy to forget that the average person probably only knows ${example}.`
+	let topic_verb = plural_topic ? 'are' : 'is'; 
+
+	let text1 = `${topic} ${topic_verb} second nature to us ${experts}, so it's easy to forget that the average person probably only knows ${example}.`
 	let text2 = `And ${response}, of course`
 	
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -85,6 +88,7 @@ function init() {
 	
 	let params = new URLSearchParams(document.location.search);
 	inputTopic.value = params.get('topic');
+	inputPluralTopic.checked = params.get('plural_topic');
 	inputExperts.value = params.get('experts');
 	inputExample.value = params.get('example');
 	inputResponse.value = params.get('response');
