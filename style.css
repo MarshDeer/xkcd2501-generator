@@ -159,3 +159,51 @@ footer a:has(img) {
 }
 
 #buttons {grid-area: button;}
+
+@media screen and  (orientation: portrait) {
+	header,
+	main,
+	footer {
+		width: calc(100% - 25px);
+	}
+	main {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+		gap: 20px;
+	}
+	canvas, main img {
+		justify-self: center;
+		width: 100%;
+		height: auto;
+	}
+	fieldset {
+		justify-self: center;
+		grid-area: initial;
+		grid-row: 2;
+		font-size: 24px;
+	}
+	input {
+		font-size: 20px;
+	}
+	input[type="checkbox"] {
+		align-self: center;  /* iOS/Safari */
+	}
+	#buttons {
+		grid-row: 3;
+		grid-column: 1;
+	}
+	fieldset::before, fieldset::after {
+		left: unset;
+		right: 18px;
+	}
+	fieldset::before {
+		top: -30px;
+		border-right-color: transparent;
+		border-bottom-color: #666;
+	}
+	fieldset::after {
+		top: -28px;
+		border-right-color: transparent;
+		border-bottom-color: #DDD;
+	}
+}
